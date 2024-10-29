@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   
+    <h2><u>Arrays</u></h2>
+    An array in PHP is an ordered map that can store multiple values. Each value
+    is associated with a unique key or index. <br /><br />
+
+    $fruits = array("apple", "banana", "cherry");<br />
+    <br />
+    <br />
+    <h2><b>Creating and Types of Arrays</b></h2>
+    PHP supports different types of arrays:<br /><br />
+
+    <h3>1) Numeric/Indexed Arrays:</h3>
+    Arrays with numeric keys (0, 1, 2, ...) and values. These arrays accessed by
+    the indexes of the element.<br /><br />
+    $numericArray = array("apple", "banana", "cherry"); echo
+    $numericArray[1];<br />
+    <b>Output :</b> banana<br /><br />
+
+    Associative Arrays: Arrays with named keys and values.<br />
+    $assocArray = array("name" => "John", "age" => 30);<br />
+    echo $assocArray["name"];<br />
+    <b>Output :</b>John<br /><br /><br />
+
+    <b><h3>2) Multidimensional Arrays:</h3></b> Arrays that contain other arrays
+    as their elements or we can say array of arrays.<br /><br /><br />
+    $multidimensionalArray = array(<br />
+    array("apple", "banana"),<br />
+    array("cherry", "date") );<br />
+    echo $multidimensionalArray[1][0]; // $result will be cherry<br />
+    <b>Output :</b> cherry<br /><br /><br />
+
+    <b>Accessing Arrays</b><br /><br />
+    You can access array elements using loops or array functions:<br /><br />
+
+    <b>Looping through Arrays:</b> Use foreach to iterate through array
+    elements.<br /><br />
+    foreach ($fruits as $fruit) {<br />
+    echo "Fruit: $fruit";<br />
+    }<br /><br /><br />
+    <b><h3>Array Functions:</h3></b>Functions like current(), next(), prev(),
+    reset(), and end() can be used to manipulate the array pointer.<br /><br />
+    $fruits = array("apple", "banana", "cherry");<br />
+    echo current($fruits) . "<br />"; // "apple"<br />
+    next($fruits); // Move pointer to the next element<br />
+    echo current($fruits); // "banana"<br /><br />
+    <b>Ouput:</b> apple banana <br /><br /><br />
+
+    <b><h3>Inspecting Arrays:</h3></b>
+    PHP provides functions to inspect arrays, such as count() and
+    array_key_exists().<br />
+    $fruits = array("apple", "banana", "cherry");<br />
+    $count = count($fruits); // 3<br />
+    $hasKey = array_key_exists("banana", $fruits); // true<br />
+    <b>Output:</b> 3 false<br /><br /><br />
+
+    <b><h3>Deleting from Arrays</h3></b>
+    You can remove elements from arrays using functions like unset().<br />
+    $fruits = array("apple", "banana", "cherry");<br />
+    unset($fruits[1]);<br />
+    print_r($fruits);<br />
+    <b>Output:</b> Array ( [0] => apple [2] => cherry )<br /><br /><br />
+
+    <b><h2>Conclusion</h2></b>
+    Arrays are a fundamental data structure in PHP, allowing you to store and
+    manipulate multiple values efficiently. Understanding the types of arrays,
+    accessing and inspecting array elements, and performing array operations are
+    essential skills for PHP developers.
+    <br /><br /><br />
+  </body>
+</html>

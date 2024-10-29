@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Times New Roman", Times, serif;
+      text-decoration: none;
+      list-style: none;
+    }
+    .hero {
+      min-height: 100vh;
+      background: url(ppp.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+      padding-top: 20px;
+    }
+    .logo {
+      color: rgb(237, 10, 10);
+      font-size: 30px;
+      font-weight: bolder;
+      transition: 0.35;
+    }
+
+    
+    nav ul {
+      display: flex;
+      align-items: center;
+    }
+    nav ul li {
+      margin: 0 20px;
+    }
+    nav ul li a {
+      font-size: 15px;
+      color: white;
+      text-transform: uppercase;
+    }
+    nav button {
+      background: rgb(221, 10, 10);
+      border: none;
+      color: white;
+      padding: 12px 35px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 2rem;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      scale: 0.8;
+    }
+    .content {
+      position: absolute;
+      top: 35%;
+      left: 90px;
+    }
+    h2 {
+      font-size: 50px;
+      text-transform: uppercase;
+      color: rgb(216, 17, 17);
+    }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: rgb(241, 236, 236);
+    }
+    .content button {
+      margin-top: 50px;
+      background: rgb(223, 8, 8);
+      border: 2px solid rgb(229, 11, 11);
+      border: none;
+      color: white;
+      padding: 12px 45px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 2rem;
+      transition: 0.3s;
+    }
+    .content button:hover {
+      scale: 0.8;
+    }
+    .content button.know_more {
+      background: transparent;
+      border: 2px solid rgb(238, 9, 9);
+      color: white;
+      margin: left 30px;
+    }
+    .content button.know_more:hover {
+      background: rgb(239, 3, 3);
+      color: rgb(245, 242, 242);
+    }
+  </style>
+  <body>
+    <div class="hero">
+      <nav>
+        <a href="#" class="logo">PHP</a>
+        <ul>
+          <li><a href="intro/intro.html">introduction</a></li>
+          <li><a href="web applications/web.html">web applications</a></li>
+          <li><a href="basic/basic.html">basic of php</a></li>
+          <li><a href="functions/functions.html">functions</a></li>
+          <li><a href="array/array.html">array</a></li>
+          <li><a href="string/string.html">String</a></li>
+          <li><a href="forms/forms.html">FORMS</a></li>
+          <li><a href="php with database/php.html">php with database</a></li> 
+          <li><a href="cookie/cookie.html">cookies</a></li>
+          
+        </ul>
+        
+      </nav>
+      <div class="content">
+        <h2>ABOUT PHP<br /></h2>
+        <p>
+          PHP is a general-purpose scripting language geared towards web
+          development.<br />
+          It was originally created by Danish-Canadian programmer 
+          Rasmus Lerdorf in <br> 1993 and released in 1995.
+        </p>
+        <button>All about Php</button>
+       
+      </div>
+    </div>
+  </body>
+</html>

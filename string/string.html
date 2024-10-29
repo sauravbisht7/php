@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+   <h2><b><u>String Handling in PHP</u></b></h2>
+<h3><b>Creating and Accessing Strings</b></h3>
+In PHP, you can create strings using single quotes ('') or double quotes (""). Accessing characters in a string is done using square brackets.
+<br><br>
+<b>Example</b><br>
+$singleQuoted = 'This is a single-quoted string';<br>
+$doubleQuoted = "This is a double-quoted string";
+<br>
+$character = $doubleQuoted[0];<br>
+echo "character is $character";<br>
+<b>Output :</b>character is T<br>
+<h3><b>Interpolation with Curly Braces</b></h3></h2>
+You can interpolate variables and expressions within double-quoted strings using curly braces ({}) for readability.<br>
+<br>
+<b>Example:</b><br>
+$name = "Alice";<br>
+$greeting = "Hello, {$name}!";<br>
+echo $greeting;<br>
+<b>Output:</b><br>Hello , ALICE<br><br>
+<h3><b>Characters and String Indexes</b></h3>
+PHP treats strings as arrays of characters, allowing you to access individual characters by index.
+<br><br>
+<b>Example:</b><br>
+$str = "PHP";<br>
+$firstChar = $str[0]; // 'P'<br>
+echo "first character is $firstChar";<br><br>
+<b>Output :</b><br>first character is P<br><br>
+<h3><b>String Operators</b></h3>
+PHP provides various string operators for concatenation and manipulation, such as :
+<br>
+Concatenation : + and . are used for concatenation.<br>
+$str1 = "Hello";<br>
+$str2 = "World";<br>
+$combined = $str1 . " " . $str2;<br>
+echo $combined;<br><b></b><br>
+<b>Output :</b><br> Hello World<br><br>
+
+
+<b><h3>Concatenation assignment :</h3></b> += and .= are used for concatenation assignment.<br><br>
+$str1 = "Hello";<br>
+$str2 = "World";<br>
+$str1 .= " " . $str2;<br>
+echo $str1;<br><br>
+<b>Output :</b><br> Hello World<br><br>
+<b><h3>Heredoc</h3></b>
+Heredoc is a way to define multi-line strings in PHP without the need for escape characters. It is particularly useful when you need to create large blocks of text or HTML content.
+<br><br>
+<b>Example</b><br>
+$variable = "PHP";<br>
+$heredocString = <<<EOT<br>
+This is a Heredoc string. <br>
+It supports multiple lines and variables: {$variable}<br>
+EOT;<br>
+echo $heredocString;<br><br>
+<b>Output :</b>
+<br>This is a Heredoc string<br>It supports multiple lines and variables<br><br>
+<h3><b>String Functions</b></h3>
+PHP provides a wide range of string functions to manipulate, format, and search within strings. Here are some commonly used string functions:
+<br><br>
+<b>1. strlen($str): </b>Returns the length of the string.<br><br>
+<b>2. $length</b> = strlen("Hello, PHP!"); // 11<br><br>
+<b>3. strtoupper($str):</b> Converts the string to uppercase.<br><br>
+<b>4. $uppercase</b> = strtoupper("Hello, PHP!"); // "HELLO, PHP!"<br><br>
+<b>5. strtolower($str):</b> Converts the string to lowercase.<br><br>
+<b>6. ucfirst($str):</b> Converts the first character of the string to uppercase.<br><br>
+<b>7. substr($str, $start, $length):</b> Extracts a substring from the given string.<br><br>
+<b>8. strpos($haystack, $needle):</b> Searches for the position of a substring within a string.<br><br>
+<b>9. str_replace($search, $replace, $str):</b> Replaces all occurrences of a search string with a replacement string.<br><br>
+<h3><b>Formatting Strings</b></h3>
+You can format strings using functions like printf and sprintf to control the output's appearance.<br>
+<br>
+<b>Example</b><br>
+$name = "Alice";<br>
+$age = 25;<br>
+$message = sprintf("Name: %s, Age: %d", $name, $age);<br>
+echo $message;<br><br>
+<b>Ouput:</b><br>Name :Alice  , Age: 25<br><br>
+<h3><b>Comparing and Searching Strings</b></h3>
+PHP provides functions for comparing and searching within strings, such as strcmp, strstr, strpos and str_replace.
+<br><br>
+<b>Example</b><br>
+$haystack = "Hello, PHP!";<br>
+$needle = "PHP";<br>
+$position = strpos($haystack, $needle);<br>
+echo "Position = $position";<br><br>
+<b>Output :</b>
+<br>Position: 7<br><br>
+<h3><b>Conclusion</b></h3>
+String handling is a fundamental part of PHP programming, and understanding how to create, manipulate, and format strings is essential for building dynamic web applications. With the wide range of string functions available in PHP, you can perform various operations on strings to meet your application's requirements.
+</b><br><br></body>
+</html>

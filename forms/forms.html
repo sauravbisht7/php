@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2><u>Forms in PHP </u></h2>
+    Forms are the basic interface between user and server. Form handling is the very basic and important feature of PHP. Using forms we can accept data from users and then we can handle the data using PHP. 
+    Data can be saved in any database server like MySql.
+        <h3><b>Form Controls</b></h3>
+        Forms in PHP allow users to submit data to a web server for processing. Common form controls include text fields, checkboxes, radio buttons, and buttons.
+        <br><br>
+        <b>Example:</b><br>
+        form action="process.php" method="post"><br>
+            label for="name">Name:<br>
+            input type="text" id="name" name="name"><br>
+            
+            label for="email">Email:<br>
+            input type="email" id="email" name="email"><br>
+            
+            input type="submit" value="Submit"><br><br>
+     
+        <b>Output :</b><br><br><form action="process.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form><br><br>
+        
+        
+        <h3><b>Super Global Variables and Arrays</b></h3>
+        PHP uses super global arrays to access form data and other server variables. Common super global arrays include:
+        <br><br>
+        <b>Example:</b><br>
+        $_GET: Contains data sent via HTTP GET method.<br>
+        // URL: example.com/index.php?name=John<br>
+        $name = $_GET["name"]; // "John"<br>
+        $_POST: Contains data sent via HTTP POST method.<br>
+        // Form: input type="text" name="name"<br>
+        $name = $_POST["name"]; // User input<br>
+        $_REQUEST: Contains data from both GET and POST methods.<br>
+        $name = $_REQUEST["name"]; // User input from GET or POST<br><br>
+        <b>You can use array functions like isset() and empty() to check if elements exist in these arrays.</b><br>
+        
+        <br>
+        if (isset($_POST["name"])) {<br>
+            $name = $_POST["name"];<br>
+            // Process the input<br>
+        }<br>
+        <h3><b>Importing and Accessing User Input</b></h3>
+        Importing and accessing user input from forms is a crucial part of web development. However, it's essential to validate and sanitize data to ensure security and data integrity.
+        <br><br>
+        <b>Here are steps to import and access user input safely:</b><br><br>
+        
+        Check if the input exists: Before using user input, check if it exists in the super global arrays to prevent undefined variable errors.<br>
+        <br><b>Sanitize and validate:</b> Sanitize user input to remove potentially harmful characters, and validate it to ensure it meets expected criteria (e.g., email format, numeric values).
+        <br><br>if (isset($_POST["name"]) && isset($_POST["email"])) {<br>
+            $name = $_POST["name"];<br>
+            $email = $_POST["email"];<br>
+            
+            // Sanitize and validate email<br>
+            $email = filter_var($email, FILTER_SANITIZE_EMAIL);<br>
+            
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {<br>
+                // Process the validated input<br>
+            } else {<br>
+                // Handle invalid email<br>
+            }<br>
+        } else {<br>
+            // Handle missing input<br>
+        }<br>
+        Implementing these checks ensures that your PHP scripts handle user input securely and reliably.<br>
+        
+        <h3><b>Conclusion</b></h3>
+        Forms are essential for user interaction on websites. PHP provides super global variables and arrays to easily handle and process user input. Understanding form controls and how to work with form data is crucial for building interactive web applications.</b>
+</body>
+</html>

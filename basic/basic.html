@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h2><u>PHP Basics</u></h2>
+<h2>Tokens</h2>
+PHP code consists of various tokens, including keywords, identifiers, constants, strings, and operators.<br />
+These tokens are the building blocks of PHP scripts.
+<br /><br />
+<h2><br>Variables</b></h2>
+Variables in PHP are used to store data. They start with a dollar sign ($) followed by an identifier. PHP variables are case-sensitive.
+<br><br>
+$variable_name = "Hello, PHP!";<br><br>
+<h2>Scope of Variables</h2><br>
+PHP variables have different scopes:<br>
+
+<h3>1)Local scope:</h3> Variables declared within a function.<br>
+<h3>2)Global scope:</h3> Variables declared outside functions.<br>
+<h3>3)Static scope:</h3> Variables within a function that retain their values between function calls.<br><br><br>
+<h2>constants</h2><br>
+Constants are used to store values that cannot be changed. They are defined using the define() function.<br>
+
+define("PI", 3.14159);<br><br>
+<h2>operator</h2><br>
+PHP supports various operators, including arithmetic, assignment, comparison, logical, and more.<br>
+
+$x = 10;<br>
+$y = 5;<br>
+$sum = $x + $y; // Addition operator<br><br>
+<h2>data types</h2><br>
+In PHP, data types specify the type of data that can be stored in a variable. PHP supports several data types, each designed for handling specific types of information. Here are some of the most common data types in PHP:
+<br>
+<h3>integer</h3> Integer data type represents whole numbers. <br>Example:<br>
+$age = 30;<br>
+<h3>Float</h3> Float data type, also known as floating-point or double, represents numbers with decimal points. Example:<br>
+$price = 19.99;<br>
+<h3>String</h3> String data type represents sequences of characters, such as text. Example:<br>
+$name = "John";<br>
+<h3>array</h3>Array data type is used to store collections of values, such as lists or associative arrays. Example:<br>
+$fruits = array("apple", "banana", "cherry");<br>
+<h3>object</h3> Object data type is used to create custom data structures and classes.<br> Example:<br>
+class Person {<br>
+    public $name;<br>
+    public $age;<br>
+}<br>
+
+$person = new Person();<br>
+$person->name = "Alice";<br>
+$person->age = 25;<br>
+<h3>Boolean</h3> Boolean data type represents true or false values. <br>Example:<br>
+$flag = true;<br>
+Understanding and correctly using data types in PHP is essential for effective programming and data manipulation in your web applications.
+<br>
+<h3>Number Handling</h3><br>
+PHP provides functions for number handling, such as intval() and floatval() for converting between data types.<br>
+
+$number = "123";<br>
+$int_number = intval($number); // Convert to integer<br>
+<h3>Comments</h3>
+Comments in PHP can be used to explain code and are not executed. Single-line comments start with //, and multi-line comments are enclosed in /* */.
+<br>
+// This is a single-line comment<br>
+
+/*<br>
+    This is a multi-line comment<br>
+    It can span multiple lines<br>
+*/<br>
+<h3>Echo and Print Statements</h3>
+PHP uses echo and print statements to output data to the browser.<br>
+
+$name = "Duniya";<br>
+echo "Namaste " . $name;<br><br>
+Output :<br>
+Namaste Duniya<br><br>
+
+
+<h3>Conclusion</h3>
+This webpage has provided an overview of essential PHP basics, including tokens, variables, scope of variables, constants, operators, data types, <br>number handling, comments, and the use of echo and print statements.Understanding these fundamental concepts is crucial for building dynamic <br>and interactive web applications with PHP. As you continue your PHP journey, you'll explore more advanced topics and gain proficiency in web development.
+</body>
+</html>

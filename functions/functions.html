@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2> <u>Functions</u></h2>
+<h3>What is a Function?</h3>
+A function in PHP is a block of code that can be called and executed multiple times. Functions are used to encapsulate a set of actions, making code more organized, reusable, and easier to maintain.
+<br>
+<h3>Arguments (Formal and Actual)</h3>
+Functions can accept parameters, known as formal parameters or arguments. When a function is called, you provide actual values for these arguments.
+<br>
+function greet($name) {<br>
+    echo "Hello, $name!";<br>
+}<br>
+greet("John");<br>
+Output :<br>
+<h4>Hello, John!</h4>
+<br>
+So in this example, John is actual paramerter and $name is formal parameter<br><br><br>
+
+<h3>Return Value</h3> 
+Functions can return values using the return statement. The returned value can be used in other parts of the code.
+<br>
+function add($a, $b) {<br>
+    return $a + $b;<br>
+}<br>
+$result = add(5, 3); // $result will be 8<br>
+Output :<br>
+<h4>8</h4>
+<br><br>
+
+<h3>Default Values</h3>
+You can specify default values for function arguments. If no value is provided when calling the function, the default value is used.
+<br>
+function greet($name = "Guest") {<br>
+    echo "Hello, $name!";<br>
+}<br>
+greet(); // $result will be "Hello, Guest!"<br>
+Output :<br>
+<h4>Hello, Guest!</h4>
+<br><br>
+
+<h3>Dynamic Function Calling</h3>
+PHP allows you to call functions dynamically using variable functions and the call_user_func function.
+<br>
+$functionName = "greet";<br>
+$functionName("saurav"); // Calls the greet function<br>
+Output :<br>
+<h4>Hello, saurav!</h4>
+<br><br>
+
+<h3>Call by Value and Reference
+</h3>By default, PHP uses call by value, which means function arguments are copies of the original values. To pass arguments by reference, you can use the & symbol.
+<br>
+function increment($num) {<br>
+    $num++;<br>
+}<br>
+function incrementByReference(&$num) {<br>
+    $num++;<br>
+}<br>
+$value = 5;<br>
+echo "Value before function calling = $value";<br>
+
+increment($value); // $value remains 5
+echo "Value after call by value = $value";<br>
+
+incrementByReference($value); // $value becomes 6
+echo "Value after call by reference = $value";<br>
+Output <br>
+<h4>Value before function calling = 5 <br>
+    Value after call by value = 5 <br>
+    Value after call by reference = 6</h4>
+<br><br>
+
+<h3>Function and Variable Scope</h3>
+PHP has different scopes for variables: local, global, and static. Variables declared inside a function are local by default.
+<br>
+$globalVar = 10;<br>
+function myFunction() {<br>
+    $localVar = 20;<br>
+}<br>
+echo $globalVar; // Accessible<br>
+echo $localVar; // Not accessible (undefined)<br>
+Output :<br>
+<h4>10</h4> 
+<h5>warning: undefined variable $localVar in /home/runner/coderanger/index.php on line 7
+<br><br>
+
+<h3>Recursion</h3>
+Recursion is a technique where a function calls itself. It's often used to solve problems that can be broken down into smaller, similar sub-problems.
+<br>
+function factorial($n) {<br>
+    if ($n === 0) { return 1; } <br>
+    else { return $n * factorial($n - 1); }<br>
+}<br>
+$fact = factorial(5);<br>
+echo $fact;<br>
+Output :<br>
+<h4>120</h4>
+<br><br>
+
+<h3>Library Functions</h3>
+PHP provides a wide range of built-in library functions for various tasks, such as string manipulation, file handling, and more. These functions can be used in your PHP scripts to perform common operations. For e.g.
+<br>
+$length = strlen("Hello, PHP!");<br>
+echo $length;<br>
+Output :<br>
+<h4>11</h4>
+<br><br>
+
+<h3>Conclusion</h3>
+Functions are a fundamental part of PHP programming, allowing you to structure your code, make it reusable, and improve maintainability. By understanding function arguments, return values, scope, recursion, and the use of library functions, you can become a more proficient PHP developer.
+</body>
+</html>
